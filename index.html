@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditi | Fashion Portfolio</title>
+  <meta name="description" content="Aditi is a Fashion Communicator & Creative Strategist crafting visual stories through editorial styling, brand campaigns, and creative direction.">
+  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <img src="assets/My logo.png" alt="Aditi Logo" class="logo-img">
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#experience" class="mobile-nav-link">Experience</a>
+    <a href="#gallery" class="mobile-nav-link">Gallery</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero section" id="hero">
+    <div class="container">
+      <h1 class="hero-title" id="hero-title">
+        <span class="line">Crafting</span>
+        <span class="line"><span class="highlight">Visual</span></span>
+        <span class="line">Stories</span>
+      </h1>
+      <p class="hero-subtitle reveal">
+        Hi! I'm Aditi, a Fashion Communicator & Creative Strategist passionate about transforming ideas into captivating visual narratives that resonate with audiences.
+      </p>
+      <a href="#projects" class="hero-cta reveal">
+        View My Work
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label reveal">About Me</div>
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <h3>I bring brands to life through fashion storytelling.</h3>
+          <p>
+            I'm a fashion communicator based in India, specializing in creating compelling brand narratives, editorial content, and visual strategies. With a keen eye for trends and a passion for aesthetics, I bridge the gap between fashion brands and their audiences.
+          </p>
+          <a href="#contact" class="card-link">
+            More about me →
+          </a>
+        </div>
+        <div class="about-card highlight-card reveal">
+          <h3>One Vision. Infinite Styles.</h3>
+          <p>
+            With experience across editorial styling, brand campaigns, and digital content creation, I craft visual experiences that are both trend-forward and timeless.
+          </p>
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">20+</div>
+              <div class="stat-label">Brands</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">4+</div>
+              <div class="stat-label">Years</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT I BRING TO THE TABLE (GSAP SKILLS) ============ -->
+  <section class="skills-section" id="skills">
+    <div class="skills-container">
+      <div class="skills-center">
+        <h2 class="skills-title">What I Bring to the Table</h2>
+        <div class="skills-subtitle">Core Capabilities</div>
+      </div>
+      
+      <!-- 6 Core Skills orbiting -->
+      <div class="skills-orbit">
+        <button class="skill-item" data-skill="photography">
+          <span class="skill-icon">📸</span>
+          <span class="skill-name">Photography</span>
+        </button>
+        <button class="skill-item" data-skill="styling">
+          <span class="skill-icon">✨</span>
+          <span class="skill-name">Styling & Art Direction</span>
+        </button>
+        <button class="skill-item" data-skill="writing">
+          <span class="skill-icon">✍️</span>
+          <span class="skill-name">Content Writing</span>
+        </button>
+        <button class="skill-item" data-skill="branding">
+          <span class="skill-icon">🎯</span>
+          <span class="skill-name">Brand Identity</span>
+        </button>
+        <button class="skill-item" data-skill="research">
+          <span class="skill-icon">🔍</span>
+          <span class="skill-name">Visual Research</span>
+        </button>
+        <button class="skill-item" data-skill="illustrations">
+          <span class="skill-icon">🎨</span>
+          <span class="skill-name">Illustrations</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS (BENTO GRID) ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-label reveal">Curated Projects</div>
+      <div class="projects-grid">
+
+        <!-- Row 1: 7 + 5 -->
+        <div class="project-card span-7 accent-card reveal">
+          <div class="project-card-top">
+            <span class="project-year">'24</span>
+            <h3 class="project-title">Vogue India Editorial</h3>
+            <p class="project-desc">Lead stylist for a 12-page editorial spread featuring emerging Indian designers. Conceptualized the visual narrative blending traditional textiles with contemporary silhouettes, reaching 2M+ readers.</p>
+          </div>
+          <div class="project-card-bottom">
+            <div class="project-tags">
+              <span class="project-tag">Editorial Styling</span>
+              <span class="project-tag">Art Direction</span>
+              <span class="project-tag">Fashion PR</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card span-5 reveal">
+          <div class="project-card-top">
+            <span class="project-year">'24</span>
+            <h3 class="project-title">Luxe & Co. Rebrand</h3>
+            <p class="project-desc">Complete visual identity overhaul for a luxury accessories brand. From mood boards to campaign shoots, crafted a cohesive brand language that increased engagement by 180%.</p>
+          </div>
+          <div class="project-card-bottom">
+            <div class="project-tags">
+              <span class="project-tag">Branding</span>
+              <span class="project-tag">Campaign</span>
+              <span class="project-tag">Strategy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: 4 + 4 + 4 -->
+        <div class="project-card span-4 dark-card reveal">
+          <div class="project-card-top">
+            <span class="project-year">'23</span>
+            <h3 class="project-title">NYFW Backstage</h3>
+            <p class="project-desc">Documented backstage fashion stories for three runway shows at New York Fashion Week, creating real-time social media content.</p>
+          </div>
+          <div class="project-card-bottom">
+            <div class="project-tags">
+              <span class="project-tag">Content</span>
+              <span class="project-tag">Social Media</span>
+              <span class="project-tag">Photography</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card span-4 reveal">
+          <div class="project-card-top">
+            <span class="project-year">'23</span>
+            <h3 class="project-title">The Style Chronicle</h3>
+            <p class="project-desc">Founded a digital fashion magazine featuring interviews with emerging designers and trend analysis pieces that garnered 500K monthly readers.</p>
+          </div>
+          <div class="project-card-bottom">
+            <div class="project-tags">
+              <span class="project-tag">Digital Publishing</span>
+              <span class="project-tag">Journalism</span>
+              <span class="project-tag">Curation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card span-4 reveal">
+          <div class="project-card-top">
+            <span class="project-year">'23</span>
+            <h3 class="project-title">Threads & Textures</h3>
+            <p class="project-desc">Art directed a textile-focused campaign celebrating Indian handloom traditions. Partnered with 8 artisan communities to showcase heritage craftsmanship.</p>
+          </div>
+          <div class="project-card-bottom">
+            <div class="project-tags">
+              <span class="project-tag">Art Direction</span>
+              <span class="project-tag">Sustainability</span>
+              <span class="project-tag">Heritage</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: 5 + 7 -->
+        <div class="project-card span-5 reveal">
+          <div class="project-card-top">
+            <span class="project-year">'22</span>
+            <h3 class="project-title">Monsoon Edit</h3>
+            <p class="project-desc">Seasonal editorial campaign for a contemporary womenswear label. Curated looks and directed a cinematic photoshoot that became the brand's most-shared campaign.</p>
+          </div>
+          <div class="project-card-bottom">
+            <div class="project-tags">
+              <span class="project-tag">Styling</span>
+              <span class="project-tag">Creative Direction</span>
+              <span class="project-tag">E-Commerce</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card span-7 dark-card reveal">
+          <div class="project-card-top">
+            <span class="project-year">'22</span>
+            <h3 class="project-title">Runway to Retail</h3>
+            <p class="project-desc">Developed a comprehensive trend translation guide for a major retail chain, converting high-fashion runway trends into accessible everyday looks for the mass market.</p>
+          </div>
+          <div class="project-card-bottom">
+            <div class="project-tags">
+              <span class="project-tag">Trend Analysis</span>
+              <span class="project-tag">Retail Strategy</span>
+              <span class="project-tag">Market Research</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4: 8 + 4 -->
+        <div class="project-card span-8 accent-card reveal">
+          <div class="project-card-top">
+            <span class="project-year">'21</span>
+            <h3 class="project-title">Sustainable Fashion Forum</h3>
+            <p class="project-desc">Co-organized and branded India's first virtual sustainable fashion summit. Created all visual communications, social media campaigns, and the event's design language. Featured 30+ speakers and 5000+ attendees.</p>
+          </div>
+          <div class="project-card-bottom">
+            <div class="project-tags">
+              <span class="project-tag">Event Branding</span>
+              <span class="project-tag">Sustainability</span>
+              <span class="project-tag">Visual Design</span>
+              <span class="project-tag">Communications</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card span-4 reveal">
+          <div class="project-card-top">
+            <span class="project-year">'21</span>
+            <h3 class="project-title">Street Style Diaries</h3>
+            <p class="project-desc">Launched a street style photography series documenting fashion subcultures across Indian metros.</p>
+          </div>
+          <div class="project-card-bottom">
+            <div class="project-tags">
+              <span class="project-tag">Photography</span>
+              <span class="project-tag">Documentation</span>
+              <span class="project-tag">Culture</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-label reveal">Experience</div>
+      <div class="experience-list">
+        <div class="experience-item reveal">
+          <span class="experience-period">2023 — Present</span>
+          <div class="experience-info">
+            <h3>Senior Fashion Communicator</h3>
+            <p>Condé Nast India — Editorial & Brand Partnerships</p>
+          </div>
+          <span class="experience-current">Current</span>
+        </div>
+        <div class="experience-item reveal">
+          <span class="experience-period">2022 — 2023</span>
+          <div class="experience-info">
+            <h3>Creative Strategist</h3>
+            <p>Luxe & Co. — Brand Identity & Campaign Direction</p>
+          </div>
+        </div>
+        <div class="experience-item reveal">
+          <span class="experience-period">2021 — 2022</span>
+          <div class="experience-info">
+            <h3>Fashion Editor</h3>
+            <p>The Style Chronicle — Digital Publishing & Trend Analysis</p>
+          </div>
+        </div>
+        <div class="experience-item reveal">
+          <span class="experience-period">2020 — 2021</span>
+          <div class="experience-info">
+            <h3>Styling Assistant</h3>
+            <p>Independent — Celebrity & Editorial Styling</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MEMORY LANE GAME ============ -->
+  <section class="memory-game-section" id="gallery">
+    <div class="memory-game-wrapper">
+      <!-- Title -->
+      <h2 class="memory-game-title reveal">
+        MEMORY <span class="strikethrough">LANE</span> GAME
+      </h2>
+
+      <!-- View Gallery link -->
+      <a href="#" class="memory-view-gallery" id="memory-view-gallery">
+        View Gallery
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </a>
+
+      <!-- 4x4 Game Grid -->
+      <div class="memory-grid" id="memory-grid">
+        <!-- 16 tiles generated by JS -->
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="memory-stats-bar">
+        <div class="memory-stat">
+          <span class="memory-stat-number" id="moves-count">0</span>
+          <span class="memory-stat-label">Moves</span>
+        </div>
+        <div class="memory-stat-divider"></div>
+        <div class="memory-stat">
+          <span class="memory-stat-number" id="misses-count">0</span>
+          <span class="memory-stat-label">Misses</span>
+        </div>
+        <div class="memory-stat-divider"></div>
+        <button class="memory-restart-btn" id="memory-restart">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="1 4 1 10 7 10"></polyline>
+            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+          </svg>
+          Restart
+        </button>
+      </div>
+    </div>
+
+    <!-- Congratulations Popup -->
+    <div class="memory-popup-overlay" id="memory-popup">
+      <div class="memory-popup">
+        <div class="confetti-container" id="confetti-container"></div>
+        <h3 class="memory-popup-title">Congratulations!</h3>
+        <p class="memory-popup-text">You have won the game, looks like you have photographic memory and a lot of time to kill. Why not look at more photos I've clicked?</p>
+        <div class="memory-popup-score">
+          <h4>Your Score</h4>
+          <div class="memory-popup-stats">
+            <span><strong id="popup-moves">0</strong> Moves</span>
+            <span><strong id="popup-misses">0</strong> Misses</span>
+          </div>
+        </div>
+        <div class="memory-popup-actions">
+          <a href="#" class="memory-popup-btn">View Gallery</a>
+          <button class="memory-popup-btn" id="play-again-btn">Play Again?</button>
+        </div>
+        <button class="memory-popup-btn memory-popup-goback" id="go-back-btn">Go Back</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTPRINTS ============ -->
+  <section class="section" id="footprints">
+    <div class="container">
+      <div class="section-label reveal">Footprints Across the Web</div>
+      <div class="footprints-grid">
+        <div class="footprint-card reveal">
+          <div class="footprint-icon">📸</div>
+          <h3>Shots & Stories</h3>
+          <p>@aditi</p>
+          <div class="footprint-tags">
+            <span class="footprint-tag">#fashion</span>
+            <span class="footprint-tag">#editorial</span>
+            <span class="footprint-tag">#styling</span>
+            <span class="footprint-tag">#travel</span>
+            <span class="footprint-tag">#design</span>
+          </div>
+        </div>
+        <div class="footprint-card reveal">
+          <div class="footprint-icon">💼</div>
+          <h3>Work & Portfolio</h3>
+          <p>linkedin.com/in/aditi</p>
+          <div class="footprint-tags">
+            <span class="footprint-tag">#fashionpr</span>
+            <span class="footprint-tag">#branding</span>
+            <span class="footprint-tag">#strategy</span>
+          </div>
+        </div>
+        <div class="footprint-card reveal">
+          <div class="footprint-icon">✍️</div>
+          <h3>Quotes & Thoughts</h3>
+          <p>@aditi</p>
+          <div class="footprint-tags">
+            <span class="footprint-tag">#trends</span>
+            <span class="footprint-tag">#opinion</span>
+            <span class="footprint-tag">#culture</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT CTA ============ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="contact-title reveal">Let's create<br>something beautiful.</h2>
+      <p class="contact-subtitle reveal">Got a project in mind? I'd love to hear about it. Let's collaborate and bring your vision to life.</p>
+      <a href="mailto:hello@aditi.com" class="contact-email reveal">
+        hello@aditi.com
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          © 2024 Aditi. All rights reserved.
+        </div>
+        <div class="footer-social">
+          <a href="#" target="_blank">Instagram</a>
+          <a href="#" target="_blank">LinkedIn</a>
+          <a href="#" target="_blank">Twitter</a>
+          <a href="#" target="_blank">Behance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP Core & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script src="main.js?v=2"></script>
+
+  <!-- ============ SKILL OVERLAY MODAL ============ -->
+  <div class="skill-overlay" id="skill-overlay">
+    <div class="skill-overlay-content">
+      <button class="skill-overlay-close" id="skill-overlay-close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="skill-overlay-inner">
+        <div class="skill-overlay-icon" id="overlay-icon">✨</div>
+        <h2 class="skill-overlay-title" id="overlay-title">Skill Name</h2>
+        <div class="skill-overlay-divider"></div>
+        <ul class="skill-overlay-list" id="overlay-list">
+          <!-- Sub segments injected here via JS -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

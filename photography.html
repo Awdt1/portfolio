@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography — Aditi</title>
+  <meta name="description" content="Explore Aditi's photography portfolio across Commercial, Street, Portrait, Editorial, E-Commerce, and Wildlife photography.">
+  <link rel="stylesheet" href="photography.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
+
+  <!-- GSAP (regular scripts, loaded first) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Three.js ES Module Import Map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Back Navigation -->
+  <a href="index.html#skills" class="back-button">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
+    Back to Portfolio
+  </a>
+
+  <!-- Section Dot Indicators -->
+  <div class="section-indicators">
+    <div class="section-dot active" data-label="Intro"></div>
+    <div class="section-dot" data-label="Commercial"></div>
+    <div class="section-dot" data-label="Street"></div>
+    <div class="section-dot" data-label="Portrait"></div>
+    <div class="section-dot" data-label="Editorial"></div>
+    <div class="section-dot" data-label="E-Commerce"></div>
+    <div class="section-dot" data-label="Wildlife"></div>
+  </div>
+
+  <!-- Ambient Background Glow -->
+  <div class="ambient-glow"></div>
+
+  <!-- 3D Camera Canvas (fixed, left half) -->
+  <canvas id="camera-canvas"></canvas>
+
+  <!-- Loading indicator -->
+  <div id="loading-indicator">
+    <div class="loading-spinner"></div>
+    <span id="loading-text">Loading 3D Model...</span>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="photo-section hero-section" id="section-hero">
+    <div class="section-content">
+      <h1 class="hero-title">Through<br>My Lens</h1>
+      <p class="hero-subtitle">Photography Portfolio</p>
+      <div class="scroll-indicator">
+        <span>Scroll to explore</span>
+        <div class="arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 1. COMMERCIAL ============ -->
+  <section class="photo-section layout-right" id="section-commercial">
+    <div class="section-content">
+      <div class="segment-number">01 / 06</div>
+      <div class="segment-label">Commercial</div>
+      <div class="section-divider"></div>
+      <h2 class="segment-title">Commercial<br>Photography</h2>
+      <p class="segment-desc">Creating compelling product and brand imagery that drives engagement and converts audiences. From luxury editorials to high-impact advertising campaigns.</p>
+      <div class="photo-gallery">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop&q=80" alt="Commercial 1" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop&q=80" alt="Commercial 2" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=400&h=300&fit=crop&q=80" alt="Commercial 3" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=300&fit=crop&q=80" alt="Commercial 4" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. STREET ============ -->
+  <section class="photo-section layout-left" id="section-street">
+    <div class="section-content">
+      <div class="segment-number">02 / 06</div>
+      <div class="segment-label">Street</div>
+      <div class="section-divider"></div>
+      <h2 class="segment-title">Street<br>Photography</h2>
+      <p class="segment-desc">Capturing candid moments and the raw energy of urban life. Finding beauty in everyday scenes, people, and the pulse of the city.</p>
+      <div class="photo-gallery">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&h=300&fit=crop&q=80" alt="Street 1" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1517732306149-e8f829eb588a?w=400&h=300&fit=crop&q=80" alt="Street 2" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=400&h=300&fit=crop&q=80" alt="Street 3" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=400&h=300&fit=crop&q=80" alt="Street 4" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. PORTRAIT ============ -->
+  <section class="photo-section layout-right" id="section-portrait">
+    <div class="section-content">
+      <div class="segment-number">03 / 06</div>
+      <div class="segment-label">Portrait</div>
+      <div class="section-divider"></div>
+      <h2 class="segment-title">Portrait<br>Photography</h2>
+      <p class="segment-desc">Revealing personality, emotion, and character through intimate portraiture. From studio sessions to environmental portraits that tell a story.</p>
+      <div class="photo-gallery">
+        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=300&fit=crop&q=80" alt="Portrait 1" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=300&fit=crop&q=80" alt="Portrait 2" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=300&fit=crop&q=80" alt="Portrait 3" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&q=80" alt="Portrait 4" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. EDITORIAL ============ -->
+  <section class="photo-section layout-left" id="section-editorial">
+    <div class="section-content">
+      <div class="segment-number">04 / 06</div>
+      <div class="segment-label">Editorial</div>
+      <div class="section-divider"></div>
+      <h2 class="segment-title">Editorial<br>Photography</h2>
+      <p class="segment-desc">Crafting visual narratives for magazines, lookbooks, and publications. Every frame is directed to communicate a concept, trend, or mood.</p>
+      <div class="photo-gallery">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=300&fit=crop&q=80" alt="Editorial 1" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&h=300&fit=crop&q=80" alt="Editorial 2" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=300&fit=crop&q=80" alt="Editorial 3" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=300&fit=crop&q=80" alt="Editorial 4" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. E-COMMERCE ============ -->
+  <section class="photo-section layout-right" id="section-ecommerce">
+    <div class="section-content">
+      <div class="segment-number">05 / 06</div>
+      <div class="segment-label">E-Commerce</div>
+      <div class="section-divider"></div>
+      <h2 class="segment-title">E-Commerce<br>Photography</h2>
+      <p class="segment-desc">Clean, high-quality product imagery optimized for online stores. From flat lays to lifestyle shots — making products irresistible to buy.</p>
+      <div class="photo-gallery">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop&q=80" alt="E-Commerce 1" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=300&fit=crop&q=80" alt="E-Commerce 2" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&h=300&fit=crop&q=80" alt="E-Commerce 3" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop&q=80" alt="E-Commerce 4" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. WILDLIFE ============ -->
+  <section class="photo-section layout-left" id="section-wildlife">
+    <div class="section-content">
+      <div class="segment-number">06 / 06</div>
+      <div class="segment-label">Wildlife</div>
+      <div class="section-divider"></div>
+      <h2 class="segment-title">Wildlife<br>Photography</h2>
+      <p class="segment-desc">Patience, passion, and the wild. Documenting nature's most awe-inspiring moments — from majestic birds to elusive big cats in their natural habitats.</p>
+      <div class="photo-gallery">
+        <img src="https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=400&h=300&fit=crop&q=80" alt="Wildlife 1" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=400&h=300&fit=crop&q=80" alt="Wildlife 2" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1535338454528-1b5a71e60e15?w=400&h=300&fit=crop&q=80" alt="Wildlife 3" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=400&h=300&fit=crop&q=80" alt="Wildlife 4" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Photography JS (ES Module) -->
+  <script type="module" src="photography.js"></script>
+</body>
+</html>
